@@ -1,0 +1,98 @@
+/* VARIABLES */
+:root {
+  --padding-sections: 40px;
+  --header-height: 60px;
+  --header-color-light: #860804;
+  --header-color-dark: #860804;
+}
+
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* VYMAZAT */
+  /* border: 1px solid rgb(2, 2, 2); */
+}
+
+/* HEADER */
+header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--header-color-light);
+  height: var(--header-height);
+}
+
+nav {
+  flex-grow: 1;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.menu-icon {
+  color: white;
+  display: none;
+}
+
+.switch-icon {
+  position: absolute;
+  right: 10px; /*tohle ještě bude třeba upravit. Vyzkoušet jak se chová při skrolování*/
+  color: yellow;
+  padding-right: 20px;
+}
+/* ---------------------------------- */
+
+/* RESPONSIVE MENU SET-UP */
+
+@media (max-width: 600px) {
+  nav {
+    position: absolute;
+    top: var(--header-height);
+    background-color: var(--header-color-light);
+    width: 50vw;
+    /* display: none; */
+    /* testing alternative way of hiding the "nav" */
+    /* visibility: hidden; */
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 23px;
+    color: white;
+  }
+
+  nav li {
+    display: block;
+    text-align: center;
+    margin: 10px 0px;
+  }
+}
+/* ---------------------------------- */
+
+/* SECTION SHOWCASE */
+
+.showcase {
+  display: flex;
+}
+.showcase-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease-in-out; /*plynulost animace zvětšení */
+  /*V případě více úprav při "hover" lze použít toto níže */
+  /* transition: all 1s linear; */
+}
+
+.showcase-img-wrapper {
+  overflow: hidden;
+}
+
+.showcase-img-wrapper :hover {
+  transform: scale(1.3); /* animace zvětšení*/
+}
