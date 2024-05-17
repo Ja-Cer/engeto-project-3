@@ -1,39 +1,33 @@
-/* General set-up */
+/* VARIABLES */
+:root {
+  --padding-sections: 40px;
+  --header-height: 60px;
+  --header-color-light: #860804;
+  --header-color-dark: #860804;
+}
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
-
+/* GENERAL */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Roboto;
-}
 
-:root {
-  --padding-sections: 40px;
-  --header-height: 70px;
+  /* VYMAZAT */
+  /* border: 1px solid rgb(2, 2, 2); */
 }
 
 /* HEADER */
 header {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #15304c;
+  background-color: var(--header-color-light);
   height: var(--header-height);
 }
 
-.logo {
-  flex-grow: 1;
-}
-
-.logo img {
-  max-width: 200px;
-  margin-left: 20px;
-}
-
 nav {
-  margin-right: 30px;
+  flex-grow: 1;
 }
 
 nav li {
@@ -41,54 +35,30 @@ nav li {
   margin-right: 20px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
 .menu-icon {
+  color: white;
   display: none;
-  margin-right: 30px;
-}
-/*----------*/
-
-/* MAIN */
-
-.welcome {
-  background-image: url(./img/background.webp);
-  min-height: calc(100vh - var(--header-height));
-  background-size: cover;
-  background-position: center;
 }
 
-/*----------*/
+.switch-icon {
+  position: absolute;
+  right: 10px; /*tohle ještě bude třeba upravit. Vyzkoušet jak se chová při skrolování*/
+  color: yellow;
+  padding-right: 20px;
+}
+/* ---------------------------------- */
 
-/* Viewport 600px or less*/
+/* RESPONSIVE MENU SET-UP */
 
 @media (max-width: 600px) {
-  header {
-    position: relative;
-  }
-
-  .logo img {
-    width: 80%;
-    min-width: 100px;
-  }
-
   nav {
     position: absolute;
     top: var(--header-height);
-    background-color: #15304c;
-    width: 100%;
-  }
-
-  /*visibilita pro <nav>, definovaná separátně přes class.
-  Class poté odebíráme/přidáváme přes js., ale Js. tím nezíská mít vyšší specifičnost než styly v CSS
-  (k čemuž by došlo při přímé úpravě stylu "display / visibility" přes Js)
-  
-  */
-  .hidden {
-    display: none;
+    background-color: var(--header-color-light);
+    width: 50vw;
+    /* display: none; */
+    /* testing alternative way of hiding the "nav" */
+    /* visibility: hidden; */
   }
 
   .menu-icon {
@@ -102,4 +72,27 @@ nav a {
     text-align: center;
     margin: 10px 0px;
   }
+}
+/* ---------------------------------- */
+
+/* SECTION SHOWCASE */
+
+.showcase {
+  display: flex;
+}
+.showcase-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease-in-out; /*plynulost animace zvětšení */
+  /*V případě více úprav při "hover" lze použít toto níže */
+  /* transition: all 1s linear; */
+}
+
+.showcase-img-wrapper {
+  overflow: hidden;
+}
+
+.showcase-img-wrapper :hover {
+  transform: scale(1.3); /* animace zvětšení*/
 }

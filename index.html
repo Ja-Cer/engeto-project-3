@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!--Jaroslav Černík-->
-    <!--Email: Jaroslav.cernik@seznam.cz-->
-    <!--Discord: Jarda Č.-->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PROJECT 3</title>
     <link rel="stylesheet" href="style.css" />
+
+    <!-- jednostránkový web
+    web je možné přepínat do dark-modu a zpět do light-modu
+    web obsahuje header, 2 sekce a footer
+    v headeru je responzivní menu minimálně se 3 položkami
+    obsah první sekce je na tobě, ale její součástí budou 3 obrázky vedle sebe, které se po najetí myši budou plynule zvětšovat a po odjetí myši zmenšovat
+    v druhé section bude umístěný formulář
+    ve formuláři se bude 2x zadávat heslo a formulář bude kontrolovat shodu hesel
+    po odscrollování směrem dolů se v pravém dolním rohu objeví ikonka zpět nahoru
+    je na tobě, jestli chceš javascriptový kód zapsat procedurálně nebo objektově
+    web by měl být responzivní
+    snaž se, aby web graficky dobře vypadal (i když hodnocení vzhledu je vždy individuální) -->
 
     <script
       src="https://kit.fontawesome.com/9fd11883f3.js"
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
   </head>
 
   <body>
     <header>
-      <div class="logo">
-        <img src="./img/logo.png" alt="logo" />
-      </div>
-
-      <nav class="hidden">
+      <nav>
         <ul>
           <li><a href="#">Domů</a></li>
           <li><a href="#">O nás</a></li>
@@ -33,12 +38,28 @@
         <i class="fa-solid fa-bars"></i>
         <!-- <i class="fa-solid fa-square-xmark"></i> -->
       </div>
+
+      <div class="switch-icon">
+        <i class="fa-solid fa-sun"></i>
+        <i class="fa-solid fa-cloud-moon"></i>
+      </div>
     </header>
 
-    <main>
-      <section class="welcome"></section>
-    </main>
+    <section class="showcase">
+      <div class="showcase-img-wrapper">
+        <img class="showcase-img" src="./img/IMG_1.jpg" alt="img1" />
+      </div>
+      <div class="showcase-img-wrapper">
+        <img class="showcase-img" src="./img/IMG_2.jpg" alt="img2" />
+      </div>
+      <div class="showcase-img-wrapper">
+        <img class="showcase-img" src="./img/IMG_3.jpg" alt="img3" />
+      </div>
+    </section>
 
+    <section class="form"></section>
+
+    <footer></footer>
     <script src="script.js"></script>
   </body>
 </html>
