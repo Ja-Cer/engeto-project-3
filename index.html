@@ -6,7 +6,8 @@
     <title>PROJECT 3</title>
     <link rel="stylesheet" href="style.css" />
 
-    <!-- jednostránkový web
+    <!-- ZADANI
+       jednostránkový web
     web je možné přepínat do dark-modu a zpět do light-modu
     web obsahuje header, 2 sekce a footer
     v headeru je responzivní menu minimálně se 3 položkami
@@ -18,6 +19,11 @@
     web by měl být responzivní
     snaž se, aby web graficky dobře vypadal (i když hodnocení vzhledu je vždy individuální) -->
 
+    <!-- TO DO
+    Doplnit změny po kliknutí na "light switch"
+    Importovat lepší font - změnit poté v ABOUT US & LOGU
+    -->
+
     <script
       src="https://kit.fontawesome.com/9fd11883f3.js"
       crossorigin="anonymous"
@@ -26,11 +32,14 @@
 
   <body>
     <header>
-      <nav>
+      <div class="logo">
+        <p>MOROCCO</p>
+      </div>
+      <nav class="hidden">
         <ul>
-          <li><a href="#">Domů</a></li>
-          <li><a href="#">O nás</a></li>
-          <li><a href="#">Kontakt</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </nav>
 
@@ -41,7 +50,7 @@
 
       <div class="switch-icon">
         <i class="fa-solid fa-sun"></i>
-        <i class="fa-solid fa-cloud-moon"></i>
+        <!-- <i class="fa-solid fa-cloud-moon"></i> -->
       </div>
     </header>
 
@@ -57,9 +66,102 @@
       </div>
     </section>
 
-    <section class="form"></section>
+    <section class="about-us">
+      <div class="about-us-wrapper">
+        <div class="about-us-text">
+          <h1>About us</h1>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum."Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+          mollit anim id est laborum."Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit anim id est laborum."Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+          sint occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum."Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum."Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum."
+        </div>
+        <div class="about-us-img"></div>
+      </div>
+    </section>
 
-    <footer></footer>
+    <section class="formApplication">
+      <form>
+        <h1>Interested? Contact us!</h1>
+        <div class="form-desc-wrapper">
+          <label class="formDesc">First name</label>
+        </div>
+        <input type="text" class="form-input" placeholder="Your first name" />
+        <br />
+
+        <div class="form-desc-wrapper">
+          <label class="formDesc">Last name</label>
+        </div>
+        <input type="text" class="form-input" placeholder="Surname" /> <br />
+
+        <div class="form-desc-wrapper">
+          <label class="formDesc">Email</label>
+        </div>
+        <input
+          type="email"
+          class="form-input"
+          placeholder="example John.Smith@gmail.com"
+        />
+        <br />
+
+        <div class="form-desc-wrapper">
+          <label class="formDesc">Please confirm your email again</label>
+        </div>
+        <input
+          type="email"
+          class="form-input"
+          placeholder="John.Smith@gmail.com"
+        />
+        <br />
+
+        <div class="form-desc-wrapper">
+          <label class="formDesc">Additional details</label>
+        </div>
+        <textarea class="form-input">Anything you´d like to add</textarea>
+        <br />
+
+        <input type="submit" value="Send" />
+      </form>
+    </section>
+
+    <footer>
+      <div class="footer-details"></div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
