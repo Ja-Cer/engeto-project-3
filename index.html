@@ -11,7 +11,8 @@
     web je možné přepínat do dark-modu a zpět do light-modu
     web obsahuje header, 2 sekce a footer
     v headeru je responzivní menu minimálně se 3 položkami
-    obsah první sekce je na tobě, ale její součástí budou 3 obrázky vedle sebe, které se po najetí myši budou plynule zvětšovat a po odjetí myši zmenšovat
+    obsah první sekce je na tobě, ale její součástí budou 3 obrázky vedle sebe, 
+    které se po najetí myši budou plynule zvětšovat a po odjetí myši zmenšovat
     v druhé section bude umístěný formulář
     ve formuláři se bude 2x zadávat heslo a formulář bude kontrolovat shodu hesel
     po odscrollování směrem dolů se v pravém dolním rohu objeví ikonka zpět nahoru
@@ -20,8 +21,9 @@
     snaž se, aby web graficky dobře vypadal (i když hodnocení vzhledu je vždy individuální) -->
 
     <!-- TO DO
-    Doplnit změny po kliknutí na "light switch"
-    Importovat lepší font - změnit poté v ABOUT US & LOGU
+     Importovat lepší font - změnit poté v ABOUT US & LOGO
+     Změnit Barvy pro Nav menu (night/day)
+     Přidat podmínky pro Alerty (shoda hesel)
     -->
 
     <script
@@ -140,7 +142,7 @@
         <br />
 
         <div class="form-desc-wrapper">
-          <label class="formDesc">Please confirm your email again</label>
+          <label class="formDesc">Confirm your email</label>
         </div>
         <input
           type="email"
@@ -150,9 +152,40 @@
         <br />
 
         <div class="form-desc-wrapper">
+          <label class="formDesc">Password</label>
+        </div>
+        <input
+          type="password"
+          class="form-input-password"
+          placeholder="Provide password if you wish to create account (min 8 char.)"
+        />
+        <br />
+
+        <div class="form-password-hidden" id="formPasswordCheck">
+          <div class="form-desc-wrapper">
+            <label class="formDesc">Confirm password</label>
+          </div>
+          <input
+            type="password"
+            class="form-input"
+            placeholder="Please write your password again"
+          />
+          <br />
+        </div>
+
+        <!-- FORM ALERTs -->
+        <div class="form-alert"></div>
+
+        <div class="form-desc-wrapper">
           <label class="formDesc">Additional details</label>
         </div>
-        <textarea class="form-input">Anything you´d like to add</textarea>
+
+        <textarea
+          class="form-input"
+          placeholder="Anything you would like to add"
+        ></textarea>
+
+        <br />
         <br />
 
         <input type="submit" value="Send" />
