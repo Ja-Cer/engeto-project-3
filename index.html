@@ -21,9 +21,10 @@
     snaž se, aby web graficky dobře vypadal (i když hodnocení vzhledu je vždy individuální) -->
 
     <!-- TO DO
-     Importovat lepší font - změnit poté v ABOUT US & LOGO
-     Změnit Barvy pro Nav menu (night/day)
-     Přidat podmínky pro Alerty (shoda hesel)
+     [√] Importovat lepší font - změnit poté v ABOUT US & LOGO
+     [√] Změnit Barvy pro Nav menu (night/day)
+     [√] Přidat podmínky pro Alerty (shoda hesel)
+     [X] Přidat odkazy k jednotlivým položkám v menu
     -->
 
     <script
@@ -40,8 +41,8 @@
       <nav class="hidden">
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#aboutUs">About Us</a></li>
+          <li><a href="#contacts">Contact</a></li>
         </ul>
       </nav>
 
@@ -51,8 +52,9 @@
       </div>
 
       <div class="switch-icon">
-        <i class="fa-solid fa-sun"></i>
+        <i class="fa-solid fa-cloud-moon"></i>
         <!-- <i class="fa-solid fa-cloud-moon"></i> -->
+        <!-- <i class="fa-solid fa-sun"></i> -->
       </div>
     </header>
 
@@ -68,50 +70,62 @@
       </div>
     </section>
 
-    <section class="about-us">
+    <section class="about-us" id="aboutUs">
       <div class="about-us-wrapper">
         <div class="about-us-text">
           <h1>About us</h1>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum."Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum."Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-          sunt in culpa qui officia deserunt mollit anim id est laborum."Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo consequat. Duis aute irure dolor in reprehenderit in
-          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum."Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum."Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum."
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum."Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+          </p>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum."Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
+          </p>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum."Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur.
+          </p>
+          <p>
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum."Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum."Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum."
+          </p>
         </div>
         <div class="about-us-img"></div>
       </div>
@@ -123,6 +137,7 @@
         <div class="form-desc-wrapper">
           <label class="formDesc">First name</label>
         </div>
+
         <input type="text" class="form-input" placeholder="Your first name" />
         <br />
 
@@ -137,6 +152,7 @@
         <input
           type="email"
           class="form-input"
+          id="emailInput"
           placeholder="example John.Smith@gmail.com"
         />
         <br />
@@ -147,6 +163,7 @@
         <input
           type="email"
           class="form-input"
+          id="email2Input"
           placeholder="John.Smith@gmail.com"
         />
         <br />
@@ -156,7 +173,8 @@
         </div>
         <input
           type="password"
-          class="form-input-password"
+          class="form-input"
+          id="password"
           placeholder="Provide password if you wish to create account (min 8 char.)"
         />
         <br />
@@ -168,13 +186,11 @@
           <input
             type="password"
             class="form-input"
+            id="password2"
             placeholder="Please write your password again"
           />
           <br />
         </div>
-
-        <!-- FORM ALERTs -->
-        <div class="form-alert"></div>
 
         <div class="form-desc-wrapper">
           <label class="formDesc">Additional details</label>
@@ -186,15 +202,35 @@
         ></textarea>
 
         <br />
+        <!-- FORM ALERTs -->
+        <div class="form-alert"></div>
         <br />
 
         <input type="submit" value="Send" />
       </form>
     </section>
+    <!--  -->
+
+    <!-- SCROLL UP BUTTON -->
+    <div class="up-button-wrapper-hidden" id="upButtonWrapper">
+      <div class="up-button">
+        <i class="fa-solid fa-circle-up"></i>
+      </div>
+    </div>
+    <!--  -->
 
     <footer>
-      <div class="footer-details"></div>
+      <div class="footer-contacts" id="contacts">
+        <h2>Contacts</h2>
+        <p>
+          Company Name: Sahara Adventure Tours <br />
+          Location: Marrakech, Morocco <br />
+          Email: info@saharaadventuretours.ma<br />
+          Phone: +212 6 12 34 56 78
+        </p>
+      </div>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

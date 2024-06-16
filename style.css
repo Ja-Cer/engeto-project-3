@@ -1,14 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
 /* VARIABLES */
 :root {
   --padding-sections: 40px;
   --header-height: 60px;
+
   --header-color-light: #5684b0;
   --header-color-dark: #410606;
+
   --body-color-light: #be6734;
   --body-color-dark: #272020;
+
+  --text-color-light: #000000;
+  --text-color-dark: #ffffff;
+
   --form-color-light: #deb887;
   --form-color-dark: #685b4b;
-  --font-family: Georgia;
+  --font-family: "Poppins";
 }
 
 /* GENERAL */
@@ -16,9 +24,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--font-family);
 
   /* VYMAZAT */
-  border: 1px solid rgb(2, 2, 2);
+  /* border: 1px solid rgb(2, 2, 2); */
 }
 
 /* HEADER */
@@ -29,19 +38,21 @@ header {
   align-items: center;
   background-color: var(--header-color-light);
   height: var(--header-height);
+  transition: 0.4s;
 }
 
 .logo {
   width: 200px;
   font-size: 50px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 200;
+
   flex-grow: 1;
   padding-left: 50px;
 }
 
 nav {
   margin-right: 30px;
-  font-family: var(--font-family);
+  font-weight: 1000;
 }
 
 nav li {
@@ -50,16 +61,14 @@ nav li {
 }
 
 .menu-icon {
-  color: white;
+  color: #eeeb31;
   display: none;
 }
 
 .switch-icon {
-  /* position: absolute; */
-  right: 10px;
+  right: 5px;
   font-size: 25px;
-  /*tohle ještě bude třeba upravit. Vyzkoušet jak se chová při skrolování*/
-  color: yellow;
+  color: #ffffff;
   padding-right: 20px;
 }
 
@@ -73,9 +82,11 @@ nav li {
     top: var(--header-height);
     background-color: var(--header-color-light);
     width: 100vw;
-    /* display: none; */
-    /* testing alternative way of hiding the "nav" */
-    /* visibility: hidden; */
+  }
+
+  .logo p {
+    font-weight: 500;
+    font-size: 30px;
   }
 
   .menu-icon {
@@ -129,7 +140,7 @@ nav li {
 
 .about-us {
   background-color: var(--body-color-light);
-  font-family: var(--font-family);
+  transition: 0.4s;
 }
 
 .about-us-wrapper {
@@ -152,8 +163,6 @@ nav li {
   background-position: center;
   background-size: cover;
   border-radius: 10px;
-  /* background-repeat: no-repeat; */
-  /* flex-basis: 400px; */
   flex-shrink: 0;
   width: 40%;
   height: auto;
@@ -178,7 +187,8 @@ nav li {
 .formApplication {
   margin: auto 0px;
   background-color: var(--body-color-light);
-  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 800;
 }
 
 form {
@@ -186,6 +196,7 @@ form {
   margin: 0px auto;
   padding: 20px 30px;
   width: 60%;
+  border-radius: 20px;
 }
 
 .formApplication h1 {
@@ -205,15 +216,8 @@ form {
   padding: 8px 12px;
   margin: 5px;
   width: 75%;
-  font-family: var(--font-family);
-}
-
-.form-input-password {
-  background-color: rgb(230, 214, 193);
-  padding: 8px 12px;
-  margin: 5px;
-  width: 75%;
-  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 800;
 }
 
 input[type="submit"] {
@@ -221,7 +225,7 @@ input[type="submit"] {
   height: 30px;
   border-radius: 30px;
   background-color: #ceccca;
-  font-family: var(--font-family);
+  font-weight: 800;
 }
 
 /* Hiding passoword check */
@@ -230,14 +234,11 @@ input[type="submit"] {
   display: none;
 }
 
-/* .form-alert-hidden {
-  display: none;
-} */
-
 .form-alert {
   width: 100%;
-  color: red;
-  font-size: 70%;
+  color: #c00808;
+  text-shadow: 0px 1px 0 #000;
+  font-size: 100%;
   text-align: center;
 }
 
@@ -255,14 +256,34 @@ input[type="submit"] {
   }
 }
 
+/* SCROLL-UP BUTTON */
+
+.up-button-wrapper-hidden {
+  visibility: hidden;
+}
+
+.up-button {
+  position: fixed;
+  color: white;
+  bottom: 20px;
+  right: 20px;
+  font-size: 30px;
+}
+
+.up-button:hover {
+  color: #000;
+}
+
 /* FOOTER SECTION */
 
 footer {
+  padding-top: 20px;
   background-size: cover;
   background-color: var(--body-color-light);
+  width: 100%;
+  font-size: 80%;
 }
 
-.footer-details {
-  height: 10vh;
-  width: 100%;
+.footer-contacts {
+  text-align: center;
 }
