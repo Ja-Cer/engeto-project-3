@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--Jaroslav Černík-->
+    <!--Email: Jaroslav.cernik@seznam.cz-->
+    <!--Discord: Jarda Č.-->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PROJECT 3</title>
     <link rel="stylesheet" href="style.css" />
 
     <!-- ZADANI
-       jednostránkový web
+    jednostránkový web
     web je možné přepínat do dark-modu a zpět do light-modu
     web obsahuje header, 2 sekce a footer
     v headeru je responzivní menu minimálně se 3 položkami
@@ -19,13 +22,6 @@
     je na tobě, jestli chceš javascriptový kód zapsat procedurálně nebo objektově
     web by měl být responzivní
     snaž se, aby web graficky dobře vypadal (i když hodnocení vzhledu je vždy individuální) -->
-
-    <!-- TO DO
-     [√] Importovat lepší font - změnit poté v ABOUT US & LOGO
-     [√] Změnit Barvy pro Nav menu (night/day)
-     [√] Přidat podmínky pro Alerty (shoda hesel)
-     [X] Přidat odkazy k jednotlivým položkám v menu
-    -->
 
     <script
       src="https://kit.fontawesome.com/9fd11883f3.js"
@@ -40,8 +36,8 @@
       </div>
       <nav class="hidden">
         <ul>
-          <li><a href="#">Home</a></li>
           <li><a href="#aboutUs">About Us</a></li>
+          <li><a href="#food">Moroccan Taste</a></li>
           <li><a href="#contacts">Contact</a></li>
         </ul>
       </nav>
@@ -131,6 +127,44 @@
       </div>
     </section>
 
+    <section class="food" id="food">
+      <div class="food-img-wrapper">
+        <img class="food-img" src="/img/bssara.jpg" alt="bssara" />
+      </div>
+
+      <div class="food-img-wrapper">
+        <img class="food-img" src="/img/zaalouk.jpg" alt="zaalouk" />
+      </div>
+
+      <div class="food-img-wrapper">
+        <img class="food-img" src="/img/makouda.jpg" alt="makouda" />
+      </div>
+
+      <div class="food-img-wrapper">
+        <img class="food-img" src="/img/couscous.jpg" alt="couscous" />
+      </div>
+
+      <div class="food-nadpis-wrapper">
+        <h2 class="nadpis-food">Moroccan taste</h2>
+      </div>
+
+      <div class="food-img-wrapper">
+        <img class="food-img" src="/img/keftaTagine.jpg" alt="keftaTagine" />
+      </div>
+
+      <div class="food-img-wrapper">
+        <img class="food-img" src="/img/harira.jpg" alt="harira" />
+      </div>
+
+      <div class="food-img-wrapper">
+        <img class="food-img" src="/img/chermoula.jpg" alt="chermoula" />
+      </div>
+
+      <div class="food-img-wrapper">
+        <img class="food-img" src="/img/tagine.jpg" alt="tagine" />
+      </div>
+    </section>
+
     <section class="formApplication">
       <form>
         <h1>Interested? Contact us!</h1>
@@ -160,6 +194,7 @@
         <div class="form-desc-wrapper">
           <label class="formDesc">Confirm your email</label>
         </div>
+
         <input
           type="email"
           class="form-input"
@@ -171,6 +206,7 @@
         <div class="form-desc-wrapper">
           <label class="formDesc">Password</label>
         </div>
+
         <input
           type="password"
           class="form-input"
@@ -183,6 +219,7 @@
           <div class="form-desc-wrapper">
             <label class="formDesc">Confirm password</label>
           </div>
+
           <input
             type="password"
             class="form-input"
@@ -198,8 +235,11 @@
 
         <textarea
           class="form-input"
+          id="textarea"
           placeholder="Anything you would like to add"
+          maxlength="1000"
         ></textarea>
+        <p class="text-counter">1000</p>
 
         <br />
         <!-- FORM ALERTs -->
@@ -222,11 +262,15 @@
     <footer>
       <div class="footer-contacts" id="contacts">
         <h2>Contacts</h2>
+
         <p>
-          Company Name: Sahara Adventure Tours <br />
-          Location: Marrakech, Morocco <br />
-          Email: info@saharaadventuretours.ma<br />
-          Phone: +212 6 12 34 56 78
+          <span style="font-weight: 800">Company Name: </span> Sahara Adventure
+          Tours <br />
+          <span style="font-weight: 800">Location: </span>Marrakech, Morocco
+          <br />
+          <span style="font-weight: 800">Email: </span
+          >info@saharaadventuretours.ma<br />
+          <span style="font-weight: 800">Phone: </span> +212 6 12 34 56 78
         </p>
       </div>
     </footer>

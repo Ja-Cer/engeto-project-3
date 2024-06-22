@@ -3,7 +3,7 @@
 /* VARIABLES */
 :root {
   --padding-sections: 40px;
-  --header-height: 60px;
+  --header-height: 70px;
 
   --header-color-light: #5684b0;
   --header-color-dark: #410606;
@@ -25,9 +25,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--font-family);
-
-  /* VYMAZAT */
-  /* border: 1px solid rgb(2, 2, 2); */
 }
 
 /* HEADER */
@@ -44,7 +41,7 @@ header {
 .logo {
   width: 200px;
   font-size: 50px;
-  font-weight: 200;
+  font-weight: 500;
 
   flex-grow: 1;
   padding-left: 50px;
@@ -72,8 +69,6 @@ nav li {
   padding-right: 20px;
 }
 
-/* ---------------------------------- */
-
 /* RESPONSIVE MENU SET-UP */
 
 @media (max-width: 768px) {
@@ -99,15 +94,13 @@ nav li {
   nav li {
     display: block;
     text-align: center;
-    margin: 20px 0px;
+    margin: 5px 0px;
   }
 
   .hidden {
     display: none;
   }
 }
-
-/* ---------------------------------- */
 
 /* SECTION SHOWCASE */
 
@@ -121,9 +114,6 @@ nav li {
   height: 100%;
   object-fit: cover;
   transition: transform 1s ease-in-out;
-  /*plynulost animace zvětšení */
-  /*V případě více úprav při "hover" lze použít toto níže */
-  /* transition: all 1s linear; */
 }
 
 .showcase-img-wrapper {
@@ -133,7 +123,6 @@ nav li {
 
 .showcase-img-wrapper :hover {
   transform: scale(1.3);
-  /* animace zvětšení*/
 }
 
 /* SECTION ABOUT-US */
@@ -159,7 +148,7 @@ nav li {
 }
 
 .about-us-img {
-  background-image: url(./img/FXT18608.JPG);
+  background-image: url(./img/IMG_US.JPG);
   background-position: center;
   background-size: cover;
   border-radius: 10px;
@@ -182,11 +171,67 @@ nav li {
   }
 }
 
+/* SECTION FOOD */
+
+.food {
+  background-color: var(--body-color-light);
+  padding: var(--padding-sections);
+  border: #000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .food {
+    flex-direction: column;
+  }
+}
+
+.food-img-wrapper {
+  width: calc(100% / 3.1);
+  position: relative;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .food-img-wrapper {
+    width: 100%;
+  }
+}
+
+.food-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.food-nadpis-wrapper {
+  width: calc(100% / 3.1);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .food-nadpis-wrapper {
+    width: 100%;
+  }
+}
+
+.nadpis-food {
+  text-align: center;
+  font-size: 40px;
+}
+
 /* SECTION FORMULAR */
 
 .formApplication {
   margin: auto 0px;
   background-color: var(--body-color-light);
+  padding: 20px 0px 20px 0px;
   font-size: 13px;
   font-weight: 800;
 }
@@ -220,6 +265,15 @@ form {
   font-weight: 800;
 }
 
+.text-counter {
+  font-size: 10px;
+}
+
+.form-input textarea {
+  width: 100%;
+  overflow: hidden;
+}
+
 input[type="submit"] {
   width: 120px;
   height: 30px;
@@ -235,24 +289,34 @@ input[type="submit"] {
 }
 
 .form-alert {
-  width: 100%;
+  width: 40%;
   color: #c00808;
-  text-shadow: 0px 1px 0 #000;
   font-size: 100%;
+  background-color: #ffffff;
   text-align: center;
+  margin: 0px auto;
+  border-radius: 10px;
 }
-
-/* Form style change for phones */
+.text-counter {
+  width: 95%;
+  text-align: right;
+}
+/* FORM style change for phones */
 
 @media screen and (max-width: 768px) {
   .form-desc-wrapper {
-    display: list-item; /* Chaning to display description above the form input fields*/
+    display: list-item;
     list-style-type: none;
     width: 100%;
   }
 
-  .form-input .form-input-password {
+  .form-input {
     width: 100%;
+    margin: 0px;
+  }
+
+  .form-input::placeholder {
+    font-size: 10px;
   }
 }
 
@@ -277,7 +341,8 @@ input[type="submit"] {
 /* FOOTER SECTION */
 
 footer {
-  padding-top: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-size: cover;
   background-color: var(--body-color-light);
   width: 100%;
@@ -286,4 +351,8 @@ footer {
 
 .footer-contacts {
   text-align: center;
+}
+
+.footer-table-contacts {
+  margin: 0px auto;
 }
