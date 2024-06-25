@@ -85,7 +85,7 @@ nav li {
     position: absolute;
     top: var(--header-height);
     background-color: var(--header-color-light);
-    width: 100vw;
+    width: 100%;
   }
 
   .logo p {
@@ -137,6 +137,7 @@ header.darkMode {
   transition: transform 1s ease-in-out;
 }
 
+/* SHOWCASE - img zoom in/out upon hover  */
 .showcase-img-wrapper {
   overflow: hidden;
   width: calc(1 / 3 * 100%);
@@ -203,22 +204,11 @@ header.darkMode {
   max-width: 100%;
   margin: 0 auto;
 }
-@media screen and (max-width: 768px) {
-  .food {
-    flex-direction: column;
-  }
-}
 
 .food-img-wrapper {
   width: calc(100% / 3.1);
   position: relative;
   margin: 0 auto;
-}
-
-@media screen and (max-width: 768px) {
-  .food-img-wrapper {
-    width: 100%;
-  }
 }
 
 .food-img {
@@ -234,15 +224,25 @@ header.darkMode {
   justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
-  .food-nadpis-wrapper {
-    width: 100%;
-  }
-}
-
 .nadpis-food {
   text-align: center;
   font-size: 40px;
+}
+
+/* SECTION FOOD  - responzive set-up - mobile */
+
+@media screen and (max-width: 768px) {
+  .food {
+    flex-direction: column;
+  }
+
+  .food-img-wrapper {
+    width: 100%;
+  }
+
+  .food-nadpis-wrapper {
+    width: 100%;
+  }
 }
 
 /* SECTION FORMULAR */
@@ -306,8 +306,7 @@ form.darkMode {
   background-color: var(--form-color-dark);
 }
 
-/* Hiding passoword check */
-
+/* FORMULAR - Alert style */
 .form-alert {
   width: 40%;
   color: #c00808;
@@ -321,7 +320,7 @@ form.darkMode {
   width: 95%;
   text-align: right;
 }
-/* FORM style change for phones */
+/* FORMULAR style change for phones */
 
 @media screen and (max-width: 768px) {
   .form-desc-wrapper {
