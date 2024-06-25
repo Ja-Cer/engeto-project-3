@@ -43,7 +43,7 @@ const iconSwap = (iconAdd, iconRemove, location) => {
 };
 ////
 
-//Function for Dark Mode Swap
+//Function for swap to Dark Mode
 
 function darkModeToggle(element) {
   element.classList.toggle("darkMode");
@@ -53,7 +53,7 @@ function hiddenToggle(element) {
   element.classList.toggle("hidden");
 }
 
-// Menu icon
+// Menu icon actions (icon swap + showing the menu)
 menuIcon.addEventListener("click", () => {
   if (hamburgerIcon.classList[1] === "fa-bars") {
     iconSwap("fa-square-xmark", "fa-bars", hamburgerIcon);
@@ -65,22 +65,23 @@ menuIcon.addEventListener("click", () => {
 });
 
 const imageSourceDay = [
-  "./img/IMG_1.jpg",
-  "./img/IMG_2.jpg",
-  "./img/IMG_3.jpg",
+  "./img/IMG_1.JPG",
+  "./img/IMG_2.JPG",
+  "./img/IMG_3.JPG",
 ];
 const imageSourceNight = [
-  "./img/IMG_1N.jpg",
-  "./img/IMG_2N.jpg",
-  "./img/IMG_3N.jpg",
+  "./img/IMG_1N.JPG",
+  "./img/IMG_2N.JPG",
+  "./img/IMG_3N.JPG",
 ];
 
-// light switch icon actions
+// Actions upon hitting the Dark Mode switch
 switchIcon.addEventListener("click", () => {
   darkModeToggle(body);
   darkModeToggle(header);
   darkModeToggle(form);
 
+  // switching icon
   if (lightIcon.classList[1] === "fa-cloud-moon") {
     iconSwap("fa-sun", "fa-cloud-moon", lightIcon);
 
@@ -92,7 +93,7 @@ switchIcon.addEventListener("click", () => {
       img.src = imageSourceNight[index % imageSourceNight.length];
     });
 
-    //switching colors in menu
+    //switching text colors in menu
     navMenu.forEach((menu) => {
       menu.style.color = textVarDark;
     });
@@ -116,7 +117,7 @@ switchIcon.addEventListener("click", () => {
 
 //FORMULAR
 
-//FORM - Password 2nd verification display
+//FORM - Password 2nd verification display upon filling 1st password
 formPassword.addEventListener("input", () => {
   let lettersCount = formPassword.value.length;
 
@@ -127,7 +128,7 @@ formPassword.addEventListener("input", () => {
   }
 });
 
-//FORM details input - changing size based on content + counting characters left
+//FORM details input - changing input area size based on content + counting characters left
 const textarea = document.getElementById("textarea");
 const counterParagraph = document.querySelector(".text-counter");
 
@@ -172,7 +173,7 @@ form.addEventListener("submit", (event) => {
     formAlert.appendChild(pElement);
   }
 
-  // checking password match
+  // checking if passwords match
   const passwordInput = document.getElementById("password");
   const passwordInput2 = document.getElementById("password2");
   const passwordInputValue = passwordInput.value;
@@ -187,7 +188,7 @@ form.addEventListener("submit", (event) => {
 
 //SCROLL-UP BUTTON
 
-// visibility
+// visibility set-up
 
 const upButtonWrapper = document.getElementById("upButtonWrapper");
 window.addEventListener("scroll", () => {
