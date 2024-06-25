@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PROJECT 3</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 
     <!-- ZADANI
     jednostránkový web
@@ -31,10 +31,10 @@
 
   <body>
     <header>
-      <div class="logo">
+      <div class="logo" id="logo">
         <p>MOROCCO</p>
       </div>
-      <nav class="hidden">
+      <nav class="hidden-menu">
         <ul>
           <li><a href="#aboutUs">About Us</a></li>
           <li><a href="#food">Moroccan Taste</a></li>
@@ -42,12 +42,12 @@
         </ul>
       </nav>
 
-      <div class="menu-icon">
+      <div class="menu-icon" id="menuIcon">
         <i class="fa-solid fa-bars"></i>
         <!-- <i class="fa-solid fa-square-xmark"></i> -->
       </div>
 
-      <div class="switch-icon">
+      <div class="switch-icon" id="switchIcon">
         <i class="fa-solid fa-cloud-moon"></i>
         <!-- <i class="fa-solid fa-cloud-moon"></i> -->
         <!-- <i class="fa-solid fa-sun"></i> -->
@@ -56,19 +56,19 @@
 
     <section class="showcase">
       <div class="showcase-img-wrapper">
-        <img class="showcase-img" src="./img/IMG_1.jpg" alt="img1" />
+        <img class="showcase-img" src="./img/IMG_1.JPG" alt="img1" />
       </div>
       <div class="showcase-img-wrapper">
-        <img class="showcase-img" src="./img/IMG_2.jpg" alt="img2" />
+        <img class="showcase-img" src="./img/IMG_2.JPG" alt="img2" />
       </div>
       <div class="showcase-img-wrapper">
-        <img class="showcase-img" src="./img/IMG_3.jpg" alt="img3" />
+        <img class="showcase-img" src="./img/IMG_3.JPG" alt="img3" />
       </div>
     </section>
 
     <section class="about-us" id="aboutUs">
       <div class="about-us-wrapper">
-        <div class="about-us-text">
+        <div class="about-us-text" id="aboutUsText">
           <h1>About us</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -165,7 +165,7 @@
       </div>
     </section>
 
-    <section class="formApplication">
+    <section class="formApplication" id="formApplication">
       <form>
         <h1>Interested? Contact us!</h1>
         <div class="form-desc-wrapper">
@@ -215,7 +215,7 @@
         />
         <br />
 
-        <div class="form-password-hidden" id="formPasswordCheck">
+        <div class="form-password hidden" id="formPasswordCheck">
           <div class="form-desc-wrapper">
             <label class="formDesc">Confirm password</label>
           </div>
@@ -243,7 +243,7 @@
 
         <br />
         <!-- FORM ALERTs -->
-        <div class="form-alert"></div>
+        <div class="form-alert" id="formAlert"></div>
         <br />
 
         <input type="submit" value="Send" />
@@ -252,7 +252,7 @@
     <!--  -->
 
     <!-- SCROLL UP BUTTON -->
-    <div class="up-button-wrapper-hidden" id="upButtonWrapper">
+    <div class="up-button-wrapper hidden" id="upButtonWrapper">
       <div class="up-button">
         <i class="fa-solid fa-circle-up"></i>
       </div>
@@ -275,6 +275,6 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
